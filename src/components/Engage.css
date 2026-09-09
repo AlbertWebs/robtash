@@ -1,0 +1,72 @@
+.engage {
+  background: var(--ri-surface);
+}
+
+.engage-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.engage-contact {
+  margin-top: var(--space-lg);
+  display: grid;
+  gap: 0.45rem;
+  color: var(--ri-muted);
+}
+
+.engage-contact a {
+  color: var(--ri-green);
+  font-weight: 600;
+}
+
+.engage-contact a:hover {
+  color: var(--ri-green-mid);
+}
+
+.engage-form-wrap {
+  background: var(--ri-white);
+  border-top: 3px solid var(--ri-gold);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.engage-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.engage-form label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ri-green-deep);
+}
+
+.engage-form input {
+  min-height: 2.85rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--ri-line);
+  border-radius: 2px;
+  background: var(--ri-surface);
+  color: var(--ri-ink);
+}
+
+.engage-form input:focus {
+  outline: 2px solid var(--ri-gold);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.engage-thanks {
+  color: var(--ri-green);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .engage-grid {
+    grid-template-columns: 1fr;
+  }
+}

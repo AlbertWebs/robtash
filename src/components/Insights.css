@@ -1,0 +1,84 @@
+.insights {
+  background: var(--ri-white);
+}
+
+.insights-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+}
+
+.insights-list {
+  display: grid;
+  gap: 0;
+}
+
+.insight-row {
+  display: grid;
+  grid-template-columns: 11rem 1fr auto;
+  grid-template-areas:
+    "tag title cta"
+    ". excerpt cta";
+  gap: 0.35rem 1.5rem;
+  align-items: start;
+  padding-block: 1.6rem;
+  border-top: 1px solid var(--ri-line);
+  transition: background 0.25s ease;
+}
+
+.insights-list li:last-child .insight-row {
+  border-bottom: 1px solid var(--ri-line);
+}
+
+.insight-row:hover {
+  background: var(--ri-surface);
+}
+
+.insight-tag {
+  grid-area: tag;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ri-gold);
+  padding-top: 0.35rem;
+}
+
+.insight-row h3 {
+  grid-area: title;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  color: var(--ri-green-deep);
+}
+
+.insight-row p {
+  grid-area: excerpt;
+  color: var(--ri-muted);
+  max-width: 40rem;
+}
+
+.insight-cta {
+  grid-area: cta;
+  align-self: center;
+  font-weight: 600;
+  color: var(--ri-green);
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .insight-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "tag"
+      "title"
+      "excerpt"
+      "cta";
+    gap: 0.45rem;
+  }
+
+  .insights-all {
+    width: 100%;
+  }
+}
