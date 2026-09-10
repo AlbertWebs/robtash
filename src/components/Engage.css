@@ -1,34 +1,153 @@
 .engage {
-  background: var(--ri-surface);
+  position: relative;
+  overflow: hidden;
+  background: var(--ri-white);
+  color: var(--ri-ink);
+}
+
+.engage .section-label {
+  color: var(--ri-green);
+}
+
+.engage .section-title {
+  color: var(--ri-green-deep);
+  max-width: 14ch;
+}
+
+.engage .section-lede {
+  color: var(--ri-muted);
 }
 
 .engage-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  align-items: stretch;
+}
+
+.engage-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.15rem;
+}
+
+.engage-copy::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  bottom: 0.15rem;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--ri-gold) 0%,
+    rgba(217, 185, 124, 0.35) 100%
+  );
+}
+
+.engage-copy .section-label {
+  color: var(--ri-gold);
+}
+
+.engage-copy .section-title {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(217, 185, 124, 0.45);
 }
 
 .engage-contact {
   margin-top: var(--space-lg);
   display: grid;
-  gap: 0.45rem;
-  color: var(--ri-muted);
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.engage-contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ri-gold);
+}
+
+.engage-contact li {
+  display: grid;
+  gap: 0.2rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(217, 185, 124, 0.35);
+}
+
+.engage-contact a,
+.engage-contact span:not(.engage-contact-label) {
+  color: var(--ri-ink);
+  font-weight: 600;
+  line-height: 1.4;
+  max-width: 28rem;
 }
 
 .engage-contact a {
   color: var(--ri-green);
-  font-weight: 600;
 }
 
 .engage-contact a:hover {
   color: var(--ri-green-mid);
 }
 
+.engage-more {
+  margin-top: 1.5rem;
+  width: fit-content;
+  font-weight: 700;
+  color: var(--ri-green);
+  border-bottom: 1px solid rgba(217, 185, 124, 0.55);
+  padding-bottom: 0.15rem;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.engage-more:hover {
+  color: var(--ri-green-deep);
+  border-bottom-color: var(--ri-gold);
+}
+
 .engage-form-wrap {
-  background: var(--ri-white);
+  background: var(--ri-surface-alt);
   border-top: 3px solid var(--ri-gold);
-  padding: clamp(1.5rem, 3vw, 2.25rem);
+  padding: clamp(1.5rem, 3vw, 2.35rem);
+  color: var(--ri-ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.engage-form-head {
+  margin-bottom: 0.35rem;
+}
+
+.engage-form-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ri-green);
+}
+
+.engage-form-head h3,
+.engage-thanks h3 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  color: var(--ri-green-deep);
+}
+
+.engage-form-head p,
+.engage-thanks p:last-child {
+  margin: 0;
+  color: var(--ri-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 .engage-form {
@@ -39,18 +158,29 @@
 .engage-form label {
   display: grid;
   gap: 0.4rem;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--ri-green-deep);
 }
 
 .engage-form input {
-  min-height: 2.85rem;
-  padding: 0.65rem 0.85rem;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem;
   border: 1px solid var(--ri-line);
   border-radius: 2px;
-  background: var(--ri-surface);
+  background: var(--ri-white);
   color: var(--ri-ink);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.engage-form input::placeholder {
+  color: rgba(74, 90, 74, 0.55);
+}
+
+.engage-form input:hover {
+  border-color: rgba(26, 81, 15, 0.28);
 }
 
 .engage-form input:focus {
@@ -59,10 +189,15 @@
   border-color: transparent;
 }
 
+.engage-submit {
+  margin-top: 0.35rem;
+  width: 100%;
+  min-height: 3.1rem;
+}
+
 .engage-thanks {
-  color: var(--ri-green);
-  font-size: 1.05rem;
-  line-height: 1.5;
+  display: grid;
+  gap: 0.35rem;
 }
 
 @media (max-width: 800px) {

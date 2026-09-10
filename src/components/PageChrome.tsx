@@ -6,12 +6,25 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   lede: string;
+  image: string;
+  imageAlt?: string;
   actions?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, lede, actions }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  lede,
+  image,
+  imageAlt = "",
+  actions,
+}: PageHeroProps) {
   return (
     <section className="page-hero">
+      <div className="page-hero-media" aria-hidden={imageAlt ? undefined : true}>
+        <img src={image} alt={imageAlt} className="page-hero-photo" />
+        <div className="page-hero-veil" />
+      </div>
       <div className="container page-hero-inner">
         <p className="section-label">{eyebrow}</p>
         <h1 className="page-hero-title">{title}</h1>

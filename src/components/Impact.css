@@ -52,6 +52,10 @@
   color: var(--ri-muted);
 }
 
+.impact-more {
+  margin-top: 2rem;
+}
+
 @media (max-width: 560px) {
   .impact-row {
     grid-template-columns: 2.5rem 1fr;

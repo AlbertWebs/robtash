@@ -1,10 +1,12 @@
 import { partnerPlaces, registeredIn } from "../data/content";
+import { FloatingGeometry } from "./FloatingGeometry";
 import { Reveal } from "./Reveal";
 import "./Geography.css";
 
 export function Geography() {
   return (
-    <section className="section geography" aria-labelledby="geo-heading">
+    <section className="section geography section-with-geo" aria-labelledby="geo-heading">
+      <FloatingGeometry variant="b" />
       <div className="container">
         <Reveal>
           <p className="section-label">Where we work</p>
@@ -12,7 +14,7 @@ export function Geography() {
             Transcontinental by design
           </h2>
           <p className="section-lede">
-            Registered in Ghana, Sierra Leone, and the United States — with
+            Registered in Ghana, Sierra Leone, and the United States - with
             partnerships and activities extending across Africa and the African
             diaspora.
           </p>

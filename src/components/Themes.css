@@ -1,4 +1,6 @@
 .themes {
+  position: relative;
+  overflow: hidden;
   background: var(--ri-white);
   border-block: 1px solid var(--ri-line);
 }

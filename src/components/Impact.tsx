@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
 import { impactStories } from "../data/content";
 import { Reveal } from "./Reveal";
 import "./Impact.css";
 
 export function Impact() {
+  const preview = impactStories.slice(0, 4);
+
   return (
     <section className="section impact" aria-labelledby="impact-heading">
       <div className="container">
@@ -19,9 +22,9 @@ export function Impact() {
         </Reveal>
 
         <ol className="impact-list">
-          {impactStories.map((story, index) => (
+          {preview.map((story, index) => (
             <Reveal
-              key={story.title}
+              key={story.id}
               as="li"
               className={`impact-row reveal-delay-${Math.min(index + 1, 3)}`}
             >
@@ -36,6 +39,12 @@ export function Impact() {
             </Reveal>
           ))}
         </ol>
+
+        <Reveal className="impact-more">
+          <Link to="/work" className="btn btn-outline">
+            Browse all work
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

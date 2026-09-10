@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
+import heroImage from "../assets/hero/slidem1d.jpg";
 import { PageBand, PageHero } from "../components/PageChrome";
 import { contact, involvePathways } from "../data/content";
 
@@ -22,7 +23,8 @@ export function GetInvolvedPage() {
       <PageHero
         eyebrow="Get involved"
         title="Partner, convene, or stay close to the work"
-        lede="Whether you are a movement partner, policymaker, funder, or community organiser — there is a place in this network."
+        lede="Whether you are a movement partner, policymaker, funder, or community organiser - there is a place in this network."
+        image={heroImage}
         actions={
           <a href="#newsletter" className="btn btn-hero">
             Join the newsletter
@@ -67,7 +69,7 @@ export function GetInvolvedPage() {
 
           {newsletterDone ? (
             <p className="form-thanks" role="status">
-              Thank you — this prototype records your interest locally. On the
+              Thank you - this prototype records your interest locally. On the
               live site, you would join the RI mailing list.
             </p>
           ) : (
@@ -107,7 +109,7 @@ export function GetInvolvedPage() {
               <p>
                 Prefer to browse first?{" "}
                 <Link to="/work">Explore our work</Link> or{" "}
-                <Link to="/insights">read the latest insights</Link>.
+                <Link to="/resources">browse the latest resources</Link>.
               </p>
             </div>
 

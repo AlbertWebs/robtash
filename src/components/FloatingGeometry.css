@@ -1,0 +1,247 @@
+/* African-inspired geometry - palette from founder/team mockup */
+:root {
+  --geo-green: #1a510f;
+  --geo-green-mid: #246818;
+  --geo-orange: #e07a2f;
+  --geo-yellow: #f0c14b;
+  --geo-navy: #1a3a6b;
+  --geo-teal: #1f6b5c;
+}
+
+.float-geo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.float-geo-piece {
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  opacity: 0.38;
+  animation: float-drift 18s ease-in-out infinite;
+}
+
+.float-geo-b .float-geo-piece {
+  animation-duration: 22s;
+  animation-direction: reverse;
+}
+
+/* Keep accents in outer margins - avoid content column */
+.float-eye {
+  width: 2.6rem;
+  height: 2.6rem;
+  background:
+    radial-gradient(circle at 50% 50%, var(--geo-navy) 0 22%, transparent 23%),
+    radial-gradient(ellipse 70% 42% at 50% 50%, #fff 0 48%, transparent 49%),
+    var(--geo-navy);
+  top: 1.25rem;
+  right: 0.75rem;
+}
+
+.float-stripes {
+  width: 2.3rem;
+  height: 2.3rem;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--geo-orange) 0 22%,
+    var(--geo-yellow) 22% 44%
+  );
+  bottom: 1.5rem;
+  right: 1.25rem;
+  animation-delay: -4s;
+}
+
+.float-arc {
+  width: 2.5rem;
+  height: 2.5rem;
+  background:
+    radial-gradient(
+      circle at 50% 110%,
+      transparent 42%,
+      var(--geo-navy) 43% 58%,
+      transparent 59%
+    ),
+    radial-gradient(
+      circle at 50% 110%,
+      transparent 58%,
+      var(--geo-orange) 59% 74%,
+      transparent 75%
+    ),
+    var(--geo-yellow);
+  top: 45%;
+  left: 0.5rem;
+  animation-delay: -8s;
+}
+
+.float-geo-b .float-eye {
+  top: auto;
+  bottom: 1.25rem;
+  right: 0.75rem;
+}
+
+.float-geo-b .float-stripes {
+  top: 1.25rem;
+  bottom: auto;
+  right: 1rem;
+}
+
+.float-geo-b .float-arc {
+  top: auto;
+  bottom: 35%;
+  left: auto;
+  right: 0.5rem;
+}
+
+@keyframes float-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.4rem);
+  }
+}
+
+/* Dense motif grid for team cards only */
+.geo-motif-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0;
+}
+
+.geo-tile {
+  display: block;
+  min-height: 0;
+}
+
+.geo-tile-eye {
+  background:
+    radial-gradient(circle at 50% 50%, var(--geo-navy) 0 20%, transparent 21%),
+    radial-gradient(ellipse 72% 40% at 50% 50%, #fff 0 46%, transparent 47%),
+    var(--geo-navy);
+}
+
+.geo-tile-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--geo-orange) 0 20%,
+    var(--geo-yellow) 20% 40%
+  );
+}
+
+.geo-tile-semi {
+  background:
+    radial-gradient(circle at 100% 50%, var(--geo-yellow) 0 50%, transparent 51%),
+    var(--geo-green);
+}
+
+.geo-tile-arc {
+  background:
+    radial-gradient(
+      circle at 50% 120%,
+      transparent 40%,
+      var(--geo-navy) 41% 56%,
+      transparent 57%
+    ),
+    radial-gradient(
+      circle at 50% 120%,
+      transparent 56%,
+      var(--geo-orange) 57% 72%,
+      transparent 73%
+    ),
+    var(--geo-yellow);
+}
+
+.geo-tile-dots {
+  background-color: var(--geo-green-mid);
+  background-image: radial-gradient(
+    circle,
+    var(--geo-yellow) 0 1.8px,
+    transparent 2px
+  );
+  background-size: 0.7rem 0.7rem;
+}
+
+.geo-tile-check {
+  background:
+    linear-gradient(45deg, var(--geo-navy) 25%, transparent 25%) 0 0 / 0.7rem
+      0.7rem,
+    linear-gradient(-45deg, var(--geo-navy) 25%, transparent 25%) 0 0 / 0.7rem
+      0.7rem,
+    linear-gradient(45deg, transparent 75%, var(--geo-navy) 75%) 0 0 / 0.7rem
+      0.7rem,
+    linear-gradient(-45deg, transparent 75%, var(--geo-navy) 75%) 0 0 / 0.7rem
+      0.7rem,
+    var(--geo-yellow);
+}
+
+.geo-tile-solid-a {
+  background: var(--geo-orange);
+}
+
+.geo-tile-solid-b {
+  background:
+    radial-gradient(circle at 30% 30%, var(--geo-yellow) 0 28%, transparent 29%),
+    var(--geo-navy);
+}
+
+.geo-motif-2 .geo-tile-eye {
+  order: 3;
+}
+.geo-motif-2 .geo-tile-stripes {
+  order: 1;
+}
+.geo-motif-2 .geo-tile-semi {
+  order: 5;
+}
+.geo-motif-2 .geo-tile-arc {
+  order: 2;
+}
+
+.geo-motif-3 .geo-tile-dots {
+  order: 1;
+}
+.geo-motif-3 .geo-tile-eye {
+  order: 4;
+}
+.geo-motif-3 .geo-tile-check {
+  order: 2;
+}
+
+.geo-motif-4 .geo-tile-arc {
+  order: 1;
+}
+.geo-motif-4 .geo-tile-solid-a {
+  order: 3;
+}
+.geo-motif-4 .geo-tile-eye {
+  order: 6;
+}
+
+.section-with-geo {
+  position: relative;
+}
+
+.section-with-geo > .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .float-geo {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-geo-piece {
+    animation: none;
+  }
+}

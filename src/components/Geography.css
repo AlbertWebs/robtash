@@ -1,4 +1,6 @@
 .geography {
+  position: relative;
+  overflow: hidden;
   background: var(--ri-green-deep);
   color: var(--ri-white);
 }

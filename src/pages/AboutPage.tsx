@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import heroImage from "../assets/work/work-5.jpg";
+import { GeometryMotifPanel } from "../components/FloatingGeometry";
 import { PageBand, PageHero } from "../components/PageChrome";
 import {
   aboutShort,
@@ -6,6 +8,7 @@ import {
   missionLead,
   partnerPlaces,
   registeredIn,
+  team,
   themes,
   valueDetails,
   vision,
@@ -18,6 +21,7 @@ export function AboutPage() {
         eyebrow="Who we are"
         title="An ethics-driven Pan-African institution"
         lede={aboutShort}
+        image={heroImage}
         actions={
           <>
             <Link to="/work" className="btn btn-hero">
@@ -66,25 +70,30 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="page-section">
+      <section className="page-section" id="how-we-work">
         <div className="container">
           <p className="section-label">How we work</p>
           <h2 className="section-title">Methods that connect ideas to influence</h2>
           <p className="section-lede">
             RI combines research, advocacy, convening, communications, and
-            organisational support — always with a cross-thematic lens.
+            organisational support - always with a cross-thematic lens.
           </p>
           <div className="approach-list">
             {approaches.map((item, index) => (
-              <article key={item.title} className="approach-row">
+              <Link
+                key={item.id}
+                to={`/about/how-we-work/${item.id}`}
+                className="approach-row approach-row-link"
+              >
                 <span className="approach-num" aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
+                  <span className="approach-read">Read more →</span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -107,6 +116,33 @@ export function AboutPage() {
             Our thematic field spans{" "}
             {themes.map((t) => t.title).join(" · ")}.
           </p>
+        </div>
+      </section>
+
+      <section className="page-section" id="team">
+        <div className="container">
+          <p className="section-label">Team</p>
+          <h2 className="section-title">People behind the work</h2>
+          <p className="section-lede">
+            A Pan-African team spanning research, finance, advocacy,
+            communications, and strategy - rooted in Accra and connected across
+            the continent and diaspora.
+          </p>
+          <div className="team-grid">
+            {team.map((member, index) => (
+              <article key={member.name} className="team-card">
+                <div className="team-card-copy">
+                  <h3>{member.name}</h3>
+                  <p className="team-card-role">{member.role}</p>
+                  <p>{member.text}</p>
+                </div>
+                <div className="team-card-media">
+                  <GeometryMotifPanel motif={index + 1} />
+                  <img src={member.image} alt={member.name} />
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

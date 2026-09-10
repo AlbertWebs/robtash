@@ -198,6 +198,16 @@ summary:focus-visible {
   color: var(--ri-white);
 }
 
+.btn-hero {
+  background: var(--ri-green);
+  color: var(--ri-white);
+  border-color: transparent;
+}
+
+.btn-hero:hover {
+  background: var(--ri-green-deep);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(1.25rem);

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { sixRs, themes } from "../data/content";
+import { FloatingGeometry } from "./FloatingGeometry";
 import { Reveal } from "./Reveal";
 import "./Themes.css";
 
@@ -8,7 +9,8 @@ export function Themes() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="section themes" aria-labelledby="themes-heading">
+    <section className="section themes section-with-geo" aria-labelledby="themes-heading">
+      <FloatingGeometry variant="a" />
       <div className="container">
         <Reveal className="themes-intro">
           <p className="section-label">Cross-thematic work</p>
@@ -17,8 +19,8 @@ export function Themes() {
           </h2>
           <p className="section-lede">
             Reparatory justice, human rights, transitional justice, and
-            democracy are one connected field of reform. We work across them —
-            research, advocacy, convening, and partnerships — so African-led
+            democracy are one connected field of reform. We work across them -
+            research, advocacy, convening, and partnerships - so African-led
             solutions can move together.
           </p>
         </Reveal>
@@ -54,7 +56,10 @@ export function Themes() {
             >
               <h3>{themes[active].title}</h3>
               <p>{themes[active].summary}</p>
-              <Link to="/work" className="theme-link">
+              <Link
+                to={`/work/${themes[active].id}`}
+                className="theme-link"
+              >
                 Read how we work →
               </Link>
             </div>
