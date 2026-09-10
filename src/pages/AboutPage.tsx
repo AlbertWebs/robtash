@@ -3,22 +3,29 @@ import heroImage from "../assets/work/work-5.jpg";
 import { GeometryMotifPanel } from "../components/FloatingGeometry";
 import { PageBand, PageHero } from "../components/PageChrome";
 import {
+  aboutLong,
   aboutShort,
   approaches,
+  capacitySupport,
+  howWeWorkIntro,
+  missionActions,
   missionLead,
   partnerPlaces,
   registeredIn,
+  strategicGoal,
   team,
   themes,
   valueDetails,
   vision,
+  whatWeDo,
+  whereWeWorkIntro,
 } from "../data/content";
 
 export function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Who we are"
+        eyebrow="About"
         title="An ethics-driven Pan-African institution"
         lede={aboutShort}
         image={heroImage}
@@ -36,7 +43,21 @@ export function AboutPage() {
 
       <section className="page-section">
         <div className="container">
-          <p className="section-label">Vision & mission</p>
+          <p className="section-label">Who we are</p>
+          <h2 className="section-title">Independent, multi-thematic, transcontinental</h2>
+          <div className="approach-detail-sections">
+            {aboutLong.map((paragraph) => (
+              <article key={paragraph.slice(0, 32)} className="approach-detail-block">
+                <p>{paragraph}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section alt">
+        <div className="container">
+          <p className="section-label">Vision, mission & strategic goal</p>
           <h2 className="section-title">What we are working toward</h2>
           <div className="mission-split">
             <article className="mission-block">
@@ -48,10 +69,24 @@ export function AboutPage() {
               <p>{missionLead}</p>
             </article>
           </div>
+          <div className="approach-detail-sections" style={{ marginTop: "2rem" }}>
+            <article className="approach-detail-block">
+              <h2>We do this by</h2>
+              <ul className="about-bullet-list">
+                {missionActions.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="approach-detail-block">
+              <h2>Strategic goal</h2>
+              <p>{strategicGoal}</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section className="page-section alt">
+      <section className="page-section">
         <div className="container">
           <p className="section-label">Core values</p>
           <h2 className="section-title">How we show up in the work</h2>
@@ -70,14 +105,25 @@ export function AboutPage() {
         </div>
       </section>
 
+      <section className="page-section alt">
+        <div className="container">
+          <p className="section-label">What we do</p>
+          <h2 className="section-title">
+            Research, policy, advocacy, convening, communications and partnerships
+          </h2>
+          <ul className="about-bullet-list about-bullet-list-wide">
+            {whatWeDo.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="page-section" id="how-we-work">
         <div className="container">
           <p className="section-label">How we work</p>
           <h2 className="section-title">Methods that connect ideas to influence</h2>
-          <p className="section-lede">
-            RI combines research, advocacy, convening, communications, and
-            organisational support - always with a cross-thematic lens.
-          </p>
+          <p className="section-lede">{howWeWorkIntro}</p>
           <div className="approach-list">
             {approaches.map((item, index) => (
               <Link
@@ -96,6 +142,14 @@ export function AboutPage() {
               </Link>
             ))}
           </div>
+          <div className="approach-detail-block" style={{ marginTop: "2.5rem" }}>
+            <h2>Capacity support for CSOs and NGOs</h2>
+            <ul className="about-bullet-list">
+              {capacitySupport.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -103,9 +157,9 @@ export function AboutPage() {
         <div className="container">
           <p className="section-label">Where we work</p>
           <h2 className="section-title">Transcontinental by design</h2>
+          <p className="section-lede">{whereWeWorkIntro}</p>
           <p className="section-lede">
-            Registered in {registeredIn.join(", ")}. Partnerships and activities
-            extend across Africa and the diaspora.
+            RI is registered in {registeredIn.join(", ")}.
           </p>
           <div className="place-chips" aria-label="Partner geographies">
             {partnerPlaces.map((place) => (

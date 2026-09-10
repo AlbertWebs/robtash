@@ -14,7 +14,7 @@
 
 .impact-row {
   display: grid;
-  grid-template-columns: 4.5rem 1fr;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
   gap: 1.25rem;
   padding-block: 1.75rem;
   border-top: 1px solid var(--ri-line);
@@ -41,10 +41,16 @@
   margin-bottom: 0.45rem;
 }
 
+.impact-body {
+  min-width: 0;
+}
+
 .impact-body h3 {
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
   color: var(--ri-green-deep);
   margin-bottom: 0.65rem;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
 
 .impact-body p:last-child {

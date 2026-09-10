@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { AboutPage } from "./pages/AboutPage";
 import { ApproachPage } from "./pages/ApproachPage";
+import { EventsPage } from "./pages/EventsPage";
 import { GetInvolvedPage } from "./pages/GetInvolvedPage";
 import { HomePage } from "./pages/HomePage";
 import { ResourcePage } from "./pages/ResourcePage";
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="resources" element={<ResourcesPage />} />
           <Route path="resources/:resourceId" element={<ResourcePage />} />
           <Route path="insights" element={<Navigate to="/resources" replace />} />
+          <Route path="events" element={<EventsPage />} />
           <Route path="get-involved" element={<GetInvolvedPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

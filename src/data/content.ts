@@ -12,9 +12,10 @@ import work4 from "../assets/work/work-4.jpg";
 import work5 from "../assets/work/work-5.jpg";
 
 export const navLinks = [
-  { to: "/about", label: "Who we are" },
+  { to: "/about", label: "About" },
   { to: "/work", label: "Our work" },
-  { to: "/resources", label: "Resources" },
+  { to: "/resources", label: "Insights & Resources" },
+  { to: "/events", label: "Events" },
   { to: "/get-involved", label: "Get involved" },
 ] as const;
 
@@ -22,25 +23,63 @@ export const vision =
   "A just and equitable future for Africans and people of African descent.";
 
 export const missionLead =
-  "We accelerate African-led solutions that advance impactful reparatory and transitional justice for historical and contemporary injustices.";
+  "To accelerate African-led solutions that advance impactful reparatory and transitional justice for historical and contemporary injustices.";
+
+export const missionActions = [
+  "Amplifying community-centred voices and initiatives by Africans and Afro-descendants across the world.",
+  "Facilitating collaborative learning and knowledge exchange.",
+  "Promoting progressive African narratives.",
+  "Convening meaningful intergenerational and transcontinental dialogues.",
+  "Building strategic connections between actors and institutions advancing justice, democratic accountability and sustainable reform.",
+] as const;
+
+export const strategicGoal =
+  "To advance reparatory justice policies and sustainable reform processes while connecting relevant actors and institutions to amplify people-centred African solutions for reparations, transitional justice and human rights, while harnessing democratic dividends.";
 
 export const aboutShort =
-  "Reform Initiatives is an ethics-driven Pan-African institution undertaking non-partisan research, policy, advocacy, convening, and strategic engagement across Africa and the African diaspora.";
+  "Reform Initiatives (RI) is an ethics-driven Pan-African institution advancing African discourses on reparatory justice, transitional justice, human rights, democracy, and good governance.";
+
+export const aboutLong = [
+  "We are an independent, multi-thematic organisation undertaking non-partisan research, policy, advocacy, convening, and strategic engagement across Africa and the African diaspora. Our work is grounded in deep Pan-African values and supported by expertise spanning government, intergovernmental, civil society, media, technology, and philanthropic engagement.",
+  "Registered and licensed to operate in Ghana, Sierra Leone, and the United States of America, our work is transcontinental in scope, with partnerships and activities extending across Africa and beyond.",
+] as const;
+
+export const whatWeDo = [
+  "Research and policy development on justice and governance.",
+  "Strategic advocacy and global engagement.",
+  "Convening dialogues, forums and high-level conversations.",
+  "Digital campaigns and narrative change initiatives.",
+  "Partnerships that connect movements, institutions and communities.",
+  "Knowledge generation, skills incubation and ideas exchange.",
+  "Engagement with media and technology actors to advance democratic and socio-political development.",
+  "Financial and operational capacity support for civil society organisations.",
+] as const;
+
+export const howWeWorkIntro =
+  "We employ a range of approaches to advance our institutional mission and goals, including partnership interventions, research, convenings, advocacy, knowledge exchange and capacity support. Through research, we investigate the causes of issues, provide critical assessments and develop pragmatic, workable solutions. We create spaces for learning and exchange and work across sectors to build connections between institutions, movements, communities and individuals. RI also undertakes consultancies in relevant fields to support our work and contribute to Africa's democratic and socio-political wellbeing.";
+
+export const capacitySupport = [
+  "Fiscal sponsorship/hosting for projects and CSO/NGO start-ups.",
+  "Technical support in finance and operations.",
+  "Training in financial management, grants management, financial sustainability and fiscal rules and regulations.",
+  "Field project financial review and monitoring.",
+  "Sub-grants management.",
+] as const;
 
 export const themes = [
   {
     id: "reparatory-justice",
     title: "Reparatory Justice",
     summary:
-      "African-led approaches to confronting the historical and ongoing harms of colonialism, enslavement, and exploitation - through reparations, restitution, historical memory, healing, and self-determination.",
+      "African-led approaches to confronting and addressing the historical and ongoing harms of colonialism, enslavement, exploitation and other systems of injustice - through reparations, restitution, historical memory, healing, and African self-determination.",
     sections: [
       {
         title: "What this theme covers",
-        text: "RI’s Reparatory Justice work advances African-led approaches to confronting and addressing the historical and ongoing harms of colonialism, enslavement, exploitation, and other systems of injustice. It brings together reparations, restitution, historical memory, accountability, healing, and African self-determination.",
+        text: "RI's Reparatory Justice thematic area advances African-led approaches to confronting and addressing the historical and ongoing harms of colonialism, enslavement, exploitation and other systems of injustice. It brings together work on reparations, restitution, historical memory, justice, accountability, healing and African self-determination, while creating space for African actors to define what repair means within their own contexts.",
       },
       {
         title: "How we work in this field",
-        text: "We serve as a facilitator, connector, and platform for African-led reparatory justice efforts - bringing movements, institutions, researchers, policymakers, cultural actors, and communities together to define what repair means in their own contexts.",
+        text: "Through this thematic area, RI serves as a facilitator, connector and platform for African-led reparatory justice efforts, bringing together movements, institutions, researchers, policymakers, cultural actors and communities working to advance justice, accountability, healing and repair.",
       },
       {
         title: "The 6Rs framework",
@@ -52,19 +91,19 @@ export const themes = [
     id: "human-rights",
     title: "Human Rights",
     summary:
-      "Protecting, promoting, and realising human rights across Africa by connecting communities, rights actors, and decision-makers so lived experience informs policy and practice.",
+      "Advancing the protection, promotion and realisation of human rights across Africa by connecting communities, rights actors and decision-makers so lived experience informs policy and practice.",
     sections: [
       {
         title: "What this theme covers",
-        text: "RI’s Human Rights work focuses on advancing the protection, promotion, and realisation of human rights across Africa. We collaborate with communities, civil society, non-state actors, and policymakers to address rights challenges and strengthen systems that uphold dignity, equality, justice, and accountability.",
+        text: "RI's Human Rights work focuses on advancing the protection, promotion and realisation of human rights across Africa. We collaborate with communities, individuals, civil society organisations, non-state actors and policymakers to address human rights challenges, prevent violations and strengthen systems that uphold dignity, equality, justice and accountability.",
       },
       {
         title: "How we work in this field",
-        text: "The programme creates space to respond to emerging human rights concerns while supporting civil society-led approaches to the complex crises affecting African societies - keeping lived experience close to policy and practice.",
+        text: "The programme creates space for RI to respond to emerging human rights concerns and evolving challenges across the continent, while supporting civil society-led approaches to addressing the complex crises affecting African societies.",
       },
       {
         title: "Who we connect",
-        text: "We strengthen connections between communities, rights actors, and decision-makers so community perspectives can inform reform, prevention, and accountability efforts across the continent.",
+        text: "RI seeks to strengthen connections between communities, rights actors and decision-makers, creating opportunities for lived experiences and community perspectives to inform policy and practice.",
       },
     ],
   },
@@ -72,15 +111,15 @@ export const themes = [
     id: "transitional-justice",
     title: "Transitional Justice",
     summary:
-      "Addressing legacies of mass violations while supporting societies to pursue truth, accountability, reparations, reconciliation, institutional reform, and non-recurrence.",
+      "Addressing the legacies of mass human rights violations and atrocities while supporting societies to build more peaceful, inclusive and just futures through truth, accountability, reparations, reconciliation, institutional reform and non-recurrence.",
     sections: [
       {
         title: "What this theme covers",
-        text: "RI’s Transitional Justice work addresses legacies of mass human rights violations and atrocities while supporting societies to build more peaceful, inclusive, and just futures through truth, accountability, reparations, reconciliation, institutional reform, and guarantees of non-recurrence.",
+        text: "RI's Transitional Justice work focuses on addressing the legacies of mass human rights violations and atrocities while supporting societies to build more peaceful, inclusive and just futures. We work with communities, individuals, civil society actors, policymakers and other stakeholders to explore approaches to truth, justice, accountability, reparations, reconciliation, institutional reform and guarantees of non-recurrence.",
       },
       {
         title: "How we work in this field",
-        text: "Bringing partners and communities together to engage policymakers is central. We support dialogue and learning around transitional justice initiatives grounded in the experiences and aspirations of affected communities.",
+        text: "Bringing partners and communities together to engage policymakers is central to our approach. RI supports dialogue and learning around transitional justice initiatives that can contribute to sustainable peace, strengthen accountability and ensure that responses to past and ongoing violations are grounded in the experiences and aspirations of affected communities.",
       },
       {
         title: "Why it matters",
@@ -92,19 +131,19 @@ export const themes = [
     id: "democracy-governance",
     title: "Democracy & Governance",
     summary:
-      "Examining barriers to meaningful representation, participation, and accountability - and reforming local, regional, and international governance systems.",
+      "Examining barriers to meaningful representation, participation and accountability - and exploring sustainable approaches to reforming local, regional and international governance systems.",
     sections: [
       {
         title: "What this theme covers",
-        text: "RI’s democracy and governance work examines barriers that prevent meaningful representation, participation, and accountability across Africa - including how weak representation can erode checks and balances and perpetuate colonial legacies.",
+        text: "RI's work on democracy and governance examines the barriers that prevent meaningful representation, participation and accountability. Under this programme, we explore barriers to democracy and good governance across Africa, engaging people across generations to examine sustainable approaches to reforming local, regional and international governance systems, structures and processes.",
       },
       {
         title: "How we work in this field",
-        text: "We engage people across generations to explore sustainable approaches to reforming local, regional, and international governance systems, structures, and processes - from civic innovation to institutional accountability.",
+        text: "We engage people across generations to explore sustainable approaches to reforming local, regional and international governance systems, structures and processes - from civic innovation to institutional accountability.",
       },
       {
         title: "Our hypothesis",
-        text: "Representation without meaningful participation weakens democratic life. Our work seeks people-centred reforms that harvest democratic dividends and keep power answerable to ordinary people.",
+        text: "Our hypothesis is that a lack of genuine representation of ordinary people, or representation without meaningful participation, can weaken checks and balances in governance, facilitate the misappropriation of resources and perpetuate colonial legacies. Our work seeks people-centred reforms that harvest democratic dividends.",
       },
     ],
   },
@@ -117,48 +156,50 @@ export function getThemeById(id: string | undefined) {
 export const sixRs = [
   {
     title: "Reconnect",
-    text: "With histories, identities, cultures, communities, lands, and knowledge systems disrupted by historical injustice.",
+    text: "Reconnect with histories, identities, cultures, communities, lands and knowledge systems disrupted by historical injustice.",
   },
   {
     title: "Re-Education",
-    text: "Reclaim knowledge, challenge dominant narratives, and deepen understanding of African histories, contributions, and resistance.",
+    text: "Reclaim knowledge, challenge dominant narratives and deepen understanding of African histories, contributions, resistance and lived experiences.",
   },
   {
     title: "Repair",
-    text: "Address material, political, social, cultural, and psychological harms through restitution, redress, and accountability.",
+    text: "Repair the material, political, social, cultural and psychological harms produced by historical and continuing systems of injustice, including through restitution, redress and accountability.",
   },
   {
     title: "Rebuild",
-    text: "Strengthen communities, institutions, systems, and movements for agency, dignity, resilience, and self-determination.",
+    text: "Rebuild communities, institutions, systems and movements in ways that strengthen agency, dignity, resilience and self-determination.",
   },
   {
     title: "Resist",
-    text: "Challenge structures and narratives that reproduce inequality, exploitation, and dispossession.",
+    text: "Resist structures, practices and narratives that continue to reproduce inequality, exploitation, dispossession and injustice, while strengthening collective action for change.",
   },
   {
     title: "Reimagine",
-    text: "Create just futures rooted in African agency, solidarity, and dignity - alternatives to systems of domination.",
+    text: "Reimagine more just futures rooted in African agency, solidarity, dignity and self-determination, while creating alternatives to systems inherited from histories of domination.",
   },
 ] as const;
 
 export const impactStories = [
+  {
+    id: "wakati-wetu",
+    title: "Co-organising Africa's first festival dedicated to reparations",
+    partner: "Wakati Wetu Festival · Continental",
+    themeId: "reparatory-justice",
+    meta: "Convening · Continental",
+    kind: "event",
+    text: "RI co-organised Africa's first-ever festival dedicated to reparations, bringing together diverse stakeholders to advance dialogue, awareness and action around reparatory justice.",
+    image: work2,
+  },
   {
     id: "unga-resolution",
     title: "Supporting a UN resolution that names enslavement as a crime against humanity",
     partner: "Government of Ghana · Global",
     themeId: "reparatory-justice",
     meta: "Policy · Global",
-    text: "Supported the Government of Ghana in drafting, negotiating, and mobilising support for UNGA Resolution A/80/L.48, recognising the trafficking of enslaved Africans and racialised chattel enslavement as the gravest crime against humanity.",
+    kind: "impact",
+    text: "RI supported the Government of Ghana in drafting, negotiating and mobilising support for the adoption of UN General Assembly Resolution A/80/L.48, recognising the trafficking of enslaved Africans and racialised chattel enslavement as the gravest crime against humanity.",
     image: work1,
-  },
-  {
-    id: "wakati-wetu",
-    title: "Co-organising Africa’s first festival dedicated to reparations",
-    partner: "Wakati Wetu · Continental",
-    themeId: "reparatory-justice",
-    meta: "Convening · Continental",
-    text: "Co-organised Africa’s first festival dedicated to reparations, bringing diverse stakeholders together to advance dialogue, awareness, and action around reparatory justice.",
-    image: work2,
   },
   {
     id: "accra-reparations",
@@ -166,8 +207,79 @@ export const impactStories = [
     partner: "Accra Reparations Conference · 2023",
     themeId: "reparatory-justice",
     meta: "Diplomacy · 2023",
-    text: "Served as institutional rapporteur and contributed to conversations on a Global Reparations Fund based in Africa and the development of the Accra Proclamation.",
+    kind: "event",
+    text: "RI served as the institutional rapporteur for the Accra Reparations Conference in November 2023. The Founder also participated in a panel examining the possibility of establishing a Global Reparations Fund based in Africa and contributed to the development of the Accra Proclamation.",
     image: work3,
+  },
+  {
+    id: "repairing-development",
+    title: "Convening the Repairing International Development Conference",
+    partner: "RI · Global Majority",
+    themeId: "reparatory-justice",
+    meta: "Convening · Global",
+    kind: "event",
+    text: "RI convened the Repairing International Development Conference, bringing together actors from across the Global Majority to examine how international development can be reimagined around indigenous knowledge, locally driven solutions and more equitable systems of development.",
+    image: work5,
+  },
+  {
+    id: "racial-justice-brazil",
+    title: "Roundtable dialogue on global racial justice in Brazil",
+    partner: "GIJTR, ICSC & CSVR · Brazil, December 2023",
+    themeId: "transitional-justice",
+    meta: "Dialogue · Brazil",
+    kind: "event",
+    text: "RI participated in a global roundtable convened by the Global Initiative for Justice, Truth and Reconciliation (GIJTR), the International Coalition of Sites of Conscience (ICSC) and the Centre for the Study of Violence and Reconciliation (CSVR). The dialogue brought together policymakers and civil society representatives working on racial justice, transitional justice and atrocity crimes.",
+    image: work1,
+  },
+  {
+    id: "au-barbados-tour",
+    title: "Supporting an AU learning tour to Barbados on reparatory justice",
+    partner: "AU ECOSOCC & AJJF · Barbados, 2023",
+    themeId: "reparatory-justice",
+    meta: "Learning · Barbados",
+    kind: "event",
+    text: "RI provided remote support to AU ECOSOCC and the Africa Judges and Jurists Forum (AJJF) for a learning tour to Barbados focused on reparatory justice, with support from the Open Society Foundations.",
+    image: work4,
+  },
+  {
+    id: "whats-possible",
+    title: "Co-hosting What's Possible! with youth organisations across Ghana",
+    partner: "CRiF · Ghana, February 2024",
+    themeId: "human-rights",
+    meta: "Convening · Ghana",
+    kind: "event",
+    text: "RI collaborated with the Children's Rights Innovation Fund (CRiF) to co-host a three-day experiential convening bringing together more than 15 youth organisations from across Ghana.",
+    image: work5,
+  },
+  {
+    id: "transforming-tj",
+    title: "Contributing to Transforming Transitional Justice in Barcelona",
+    partner: "GIJTR · Barcelona, March 2024",
+    themeId: "transitional-justice",
+    meta: "Learning · Barcelona",
+    kind: "event",
+    text: "RI participated in GIJTR's 10-year anniversary event, Transforming Transitional Justice: Innovative Approaches for Centering Communities to Lead Post Conflict, contributing to conversations on community-centred approaches to transitional justice.",
+    image: work3,
+  },
+  {
+    id: "philanthropy-reparations",
+    title: "Examining philanthropy's role in racial and reparatory justice",
+    partner: "AfALab & WACSI · June 2024",
+    themeId: "reparatory-justice",
+    meta: "Roundtable · 2024",
+    kind: "event",
+    text: "RI co-organised a two-day roundtable with African Future Lab (AfALab) and WACSI examining the role of philanthropy in advancing racial and reparatory justice. The convening brought together thought leaders, grantmakers and policymakers to explore how philanthropic actors can better support reparations and racial justice movements.",
+    image: work2,
+  },
+  {
+    id: "africans-rising",
+    title: "Leading a reparations session at the Africans Rising Assembly",
+    partner: "Africans Rising · August 2024",
+    themeId: "reparatory-justice",
+    meta: "Assembly · Continental",
+    kind: "event",
+    text: "RI participated in the annual continental assembly of Africans Rising and led a special session on reparations, sharing insights on reparatory justice advocacy efforts.",
+    image: work1,
   },
   {
     id: "ovaherero-nama",
@@ -175,28 +287,33 @@ export const impactStories = [
     partner: "OTA & NTLA · Namibia",
     themeId: "human-rights",
     meta: "Solidarity · Namibia",
-    text: "Partnering with the Ovaherero Traditional Authority and Nama Traditional Leaders Association in their campaign for reparations - including ongoing fiscal sponsorship support.",
+    kind: "impact",
+    text: "RI was invited to partner with the Ovaherero Traditional Authority (OTA) and Nama Traditional Leaders Association (NTLA) in their ongoing campaign for reparations from the German government for the genocide committed against the Ovaherero and Nama peoples. RI continues to provide fiscal sponsorship support to both organisations.",
     image: work4,
   },
   {
-    id: "democracy-cafe",
-    title: "Opening space for young people to prototype more just democratic participation",
-    partner: "AU ECOSOCC · Accra & Lusaka",
-    themeId: "democracy-governance",
-    meta: "Open call · Youth",
-    text: "Supporting the Democracy Innovations Café for young people in Accra and Lusaka with ideas that could make democracy more just and resilient.",
-    image: work5,
+    id: "uk-reparations",
+    title: "Participating in the UK Reparations Conference: From Acknowledgement to Action",
+    partner: "APPG on Afrikan Reparations · 2024",
+    themeId: "reparatory-justice",
+    meta: "Conference · UK",
+    kind: "event",
+    text: "RI participated in the UK Reparations Conference organised by the All-Party Parliamentary Group on Afrikan Reparations. The conference examined pathways towards reparatory justice across areas including racial justice, education, law and governance, decolonising aid, environmental justice, cultural rights, economics, health and wellbeing, and science.",
+    image: work3,
   },
   {
-    id: "transitional-learning",
-    title: "Connecting community-centred transitional justice learning across continents",
-    partner: "GIJTR & partners · Global",
-    themeId: "transitional-justice",
-    meta: "Learning · Global",
-    text: "Participating in roundtables and learning exchanges that centre communities in truth, accountability, reparations, and non-recurrence.",
-    image: work1,
+    id: "forge",
+    title: "Contributing to FORGE: harnessing creative arts for reparatory justice",
+    partner: "FORGE · Narrative & arts",
+    themeId: "reparatory-justice",
+    meta: "Creative · Narrative",
+    kind: "impact",
+    text: "RI contributed to the development of FORGE, a gathering designed to harness arts, media and storytelling for racial healing and reparatory justice. The initiative created a space for narrative practitioners, storytellers, content creators and curators to ideate, co-create and explore new narratives and behavioural change approaches for advancing reparatory justice.",
+    image: work2,
   },
 ] as const;
+
+export const events = impactStories.filter((item) => item.kind === "event");
 
 export const insights = [
   {
@@ -215,43 +332,45 @@ export const insights = [
   },
   {
     tag: "Statement",
-    title: "Ghana’s Community Service Bill, 2026",
+    title: "Ghana's Community Service Bill, 2026",
     excerpt:
-      "Reform Initiatives commends the passage of Ghana’s Community Service Bill as a meaningful step for justice and accountability.",
-    href: "/resources/insights",
+      "Reform Initiatives commends the passage of Ghana's Community Service Bill as a meaningful step for justice and accountability.",
+    href: "/resources/research",
   },
 ] as const;
 
 export const resources = [
   {
-    id: "policy-papers",
-    title: "Policy Papers",
+    id: "research",
+    title: "Research & Publications",
     summary:
-      "Briefings, statements, and analytical notes that connect African-led justice agendas to policy processes across the continent and beyond.",
+      "Research reports, policy briefs and analytical publications produced through RI's work across reparatory justice, human rights, transitional justice and democratic governance.",
     sections: [
       {
         title: "What you will find",
-        text: "Policy papers and public statements that track legislation, diplomatic breakthroughs, and institutional reform - written for movements, partners, and decision-makers.",
+        text: "Research reports, policy briefs, statements and analytical notes that connect African-led justice agendas to policy processes across the continent and beyond.",
       },
       {
         title: "How we use them",
-        text: "These papers support advocacy and engagement by translating complex justice questions into clear options for action.",
+        text: "These publications support advocacy and engagement by translating complex justice questions into clear options for action for movements, partners and decision-makers.",
       },
     ],
     items: [
       {
         tag: "Statement",
-        title: "Ghana’s Community Service Bill, 2026",
+        title: "Ghana's Community Service Bill, 2026",
         excerpt:
-          "Reform Initiatives commends the passage of Ghana’s Community Service Bill as a meaningful step for justice and accountability.",
+          "Reform Initiatives commends the passage of Ghana's Community Service Bill as a meaningful step for justice and accountability.",
         meta: "Public statement · Ghana",
+        themeId: "democracy-governance",
       },
       {
         tag: "Briefing",
         title: "From Accra to the UN: African leadership on reparations",
         excerpt:
-          "How RI’s support to Ghana’s diplomacy connects continental advocacy with global recognition of enslavement as a crime against humanity.",
+          "How RI's support to Ghana's diplomacy connects continental advocacy with global recognition of enslavement as a crime against humanity.",
         meta: "Policy note · Global",
+        themeId: "reparatory-justice",
       },
     ],
   },
@@ -259,11 +378,11 @@ export const resources = [
     id: "insights",
     title: "Insights",
     summary:
-      "Essays, explainers, and open calls that invite communities, young people, and partners into the work of African-led repair.",
+      "Articles, explainers and open calls that invite communities, young people and partners into the work of African-led repair.",
     sections: [
       {
         title: "What you will find",
-        text: "Accessible writing and calls that open reparatory justice, human rights, and democratic reform to wider audiences - especially youth and community organisers.",
+        text: "Accessible writing and calls that open reparatory justice, human rights and democratic reform to wider audiences - especially youth and community organisers.",
       },
       {
         title: "How we use them",
@@ -277,6 +396,7 @@ export const resources = [
         excerpt:
           "What if your idea could help make democracy more just and resilient? Applications are open for young people shaping civic participation in Accra and Lusaka.",
         meta: "Open call · Accra & Lusaka",
+        themeId: "democracy-governance",
       },
       {
         tag: "Insight",
@@ -284,22 +404,23 @@ export const resources = [
         excerpt:
           "A plain-language entry point into African history, historical injustice, and why reparatory justice matters for young people today.",
         meta: "Essay · Youth & justice",
+        themeId: "reparatory-justice",
       },
     ],
   },
   {
-    id: "podcasts",
-    title: "Podcasts",
+    id: "multimedia",
+    title: "Multimedia",
     summary:
-      "Audio conversations that carry African perspectives on reparatory justice, democratic futures, and collective repair beyond the page.",
+      "Podcasts and multimedia resources that carry African perspectives on reparatory justice, democratic futures and collective repair beyond the page.",
     sections: [
       {
         title: "What you will find",
-        text: "Episodes and series - including Reparatory Futures - featuring practitioners, organisers, and thinkers shaping justice conversations across Africa and the diaspora.",
+        text: "Audio conversations and multimedia resources - including Reparatory Futures - featuring practitioners, organisers and thinkers shaping justice conversations across Africa and the diaspora.",
       },
       {
         title: "How we use them",
-        text: "Podcasts extend RI’s narrative work into listening spaces, making complex justice debates portable, personal, and shareable.",
+        text: "Multimedia extends RI's narrative work into listening and viewing spaces, making complex justice debates portable, personal and shareable.",
       },
     ],
     items: [
@@ -309,6 +430,7 @@ export const resources = [
         excerpt:
           "A series elevating African discourses on reparations, historical injustice, and the futures communities are building together.",
         meta: "Series · Audio",
+        themeId: "reparatory-justice",
       },
       {
         tag: "Episode",
@@ -316,30 +438,44 @@ export const resources = [
         excerpt:
           "Why placing creatives at the centre of democracy conversations matters for reimagining participation and public life.",
         meta: "Episode · Democracy",
+        themeId: "democracy-governance",
       },
     ],
   },
 ] as const;
 
 export function getResourceById(id: string | undefined) {
-  return resources.find((item) => item.id === id);
+  if (!id) return undefined;
+  const aliases: Record<string, string> = {
+    "policy-papers": "research",
+    podcasts: "multimedia",
+  };
+  const resolved = aliases[id] ?? id;
+  return resources.find((item) => item.id === resolved);
 }
 
 export const registeredIn = ["Ghana", "Sierra Leone", "United States of America"];
 
 export const partnerPlaces = [
+  "Ghana",
+  "Sierra Leone",
+  "United States",
   "Namibia",
   "The Gambia",
   "Ethiopia",
   "Liberia",
   "Senegal",
+  "Scotland",
   "Zambia",
   "Egypt",
-  "Scotland",
   "Colombia",
+  "Nicaragua",
   "Jamaica",
   "Barbados",
 ];
+
+export const whereWeWorkIntro =
+  "Reform Initiatives' current work is focused on Africa, with activities and partnerships extending across the continent and the African diaspora. Our work is transcontinental through partnerships, collaboration and knowledge exchange.";
 
 export const values = [
   "Professionalism & Ethics",
@@ -517,15 +653,15 @@ export const approaches = [
   {
     id: "partnerships-capacity-support",
     title: "Partnerships & capacity support",
-    text: "Connect institutions and movements, and provide fiscal sponsorship, grants management, and operational support for CSOs.",
+    text: "Connect institutions and movements, and provide financial and operational capacity support for CSOs and NGOs.",
     sections: [
       {
         title: "What this looks like",
-        text: "We connect institutions and movements, and provide fiscal sponsorship, grants management, training, and operational support so civil society organisations can sustain their work with integrity.",
+        text: "We connect institutions and movements, and provide financial and operational capacity support to CSOs and NGOs through fiscal sponsorship/hosting for projects and CSO/NGO start-ups; technical support in finance and operations; training in financial management, grants management, financial sustainability and fiscal rules and regulations; field project financial review and monitoring; and sub-grants management.",
       },
       {
         title: "How it advances the mission",
-        text: "Strong partners multiply impact. Capacity support protects African-led initiatives from administrative barriers while keeping resources accountable and mission-aligned.",
+        text: "Strong partners multiply impact. Capacity support protects African-led initiatives from administrative barriers while keeping resources accountable and mission-aligned. RI also undertakes consultancies in relevant fields to support our work and contribute to Africa's democratic and socio-political wellbeing.",
       },
       {
         title: "Who we work with",

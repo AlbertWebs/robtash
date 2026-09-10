@@ -158,7 +158,7 @@ export function GetInvolvedPage() {
       <PageBand
         title="Learn who stands behind the work"
         text="Meet the values, mission, and footprint that shape Reform Initiatives."
-        ctaLabel="Who we are"
+        ctaLabel="About RI"
         ctaTo="/about"
       />
     </>

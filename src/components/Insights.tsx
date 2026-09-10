@@ -9,13 +9,13 @@ export function Insights() {
       <div className="container">
         <Reveal className="insights-head">
           <div>
-            <p className="section-label">Resources</p>
+            <p className="section-label">Insights & Resources</p>
             <h2 id="resources-heading" className="section-title">
-              Policy papers, insights, and podcasts
+              Research, insights, and multimedia
             </h2>
           </div>
           <Link to="/resources" className="btn btn-outline insights-all">
-            All resources
+            Browse hub
           </Link>
         </Reveal>
 

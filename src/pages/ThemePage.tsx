@@ -4,7 +4,12 @@ import work2 from "../assets/work/work-2.jpg";
 import work3 from "../assets/work/work-3.jpg";
 import work4 from "../assets/work/work-4.jpg";
 import { PageBand, PageHero } from "../components/PageChrome";
-import { getThemeById, themes } from "../data/content";
+import {
+  getThemeById,
+  impactStories,
+  resources,
+  themes,
+} from "../data/content";
 
 const themeHeroes = {
   "reparatory-justice": work1,
@@ -24,6 +29,12 @@ export function ThemePage() {
   const index = themes.findIndex((item) => item.id === theme.id);
   const others = themes.filter((item) => item.id !== theme.id);
   const heroImage = themeHeroes[theme.id];
+  const relatedWork = impactStories.filter((item) => item.themeId === theme.id);
+  const relatedInsights = resources.flatMap((resource) =>
+    resource.items
+      .filter((item) => item.themeId === theme.id)
+      .map((item) => ({ ...item, resourceId: resource.id })),
+  );
 
   return (
     <>
@@ -60,6 +71,54 @@ export function ThemePage() {
           </div>
         </div>
       </section>
+
+      {relatedWork.length > 0 ? (
+        <section className="page-section alt">
+          <div className="container">
+            <p className="section-label">Selected contributions</p>
+            <h2 className="section-title">Impact within this theme</h2>
+            <div className="approach-list">
+              {relatedWork.map((item, itemIndex) => (
+                <article key={item.id} className="approach-row">
+                  <span className="approach-num" aria-hidden="true">
+                    {String(itemIndex + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <p className="meta">{item.meta}</p>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {relatedInsights.length > 0 ? (
+        <section className="page-section">
+          <div className="container">
+            <p className="section-label">Latest insights</p>
+            <h2 className="section-title">From Insights & Resources</h2>
+            <div className="insight-feed">
+              {relatedInsights.map((item) => (
+                <article key={item.title} className="insight-article">
+                  <span className="tag">{item.tag}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.excerpt}</p>
+                  <p className="meta">{item.meta}</p>
+                  <Link
+                    to={`/resources/${item.resourceId}`}
+                    className="approach-read"
+                  >
+                    Browse collection →
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="page-section alt">
         <div className="container">
@@ -99,7 +158,7 @@ export function ThemePage() {
       <PageBand
         title="See how methods connect to themes"
         text="Research, advocacy, convening, communications, and partnerships cut across every thematic area."
-        ctaLabel="Who we are"
+        ctaLabel="About RI"
         ctaTo="/about#how-we-work"
       />
     </>

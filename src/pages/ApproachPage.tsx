@@ -63,7 +63,7 @@ export function ApproachPage() {
           <h2 className="section-title">Continue exploring how we work</h2>
           <p className="section-lede">
             Each method reinforces the others. Move to another approach, or
-            return to the full list on Who we are.
+            return to the full list on About.
           </p>
           <div className="approach-list">
             {others.map((item) => {

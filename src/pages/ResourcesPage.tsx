@@ -7,9 +7,9 @@ export function ResourcesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Resources"
-        title="Policy papers, insights, and podcasts"
-        lede="A content hub for movements, policymakers, and communities - keeping African-led justice conversations alive between major campaigns."
+        eyebrow="Insights & Resources"
+        title="Research, insights, and multimedia"
+        lede="A knowledge hub for movements, policymakers, and communities - research reports, policy briefs, articles, convening notes, and multimedia resources produced through RI's work."
         image={heroImage}
         actions={
           <Link to="/get-involved#newsletter" className="btn btn-hero">
@@ -23,8 +23,9 @@ export function ResourcesPage() {
           <p className="section-label">Browse by type</p>
           <h2 className="section-title">Three ways into the work</h2>
           <p className="section-lede">
-            Choose a resource stream to go deeper - each page collects related
-            papers, essays, calls, or audio.
+            Content is organised by resource type and tagged across themes so the
+            same piece can surface in Insights & Resources and on relevant
+            thematic pages.
           </p>
           <div className="theme-stack">
             {resources.map((resource, index) => (

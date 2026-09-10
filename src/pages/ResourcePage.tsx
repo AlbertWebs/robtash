@@ -22,7 +22,7 @@ export function ResourcePage() {
   return (
     <>
       <PageHero
-        eyebrow="Resources"
+        eyebrow="Insights & Resources"
         title={resource.title}
         lede={resource.summary}
         image={heroImage}

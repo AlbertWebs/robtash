@@ -26,10 +26,12 @@ export function PageHero({
         <div className="page-hero-veil" />
       </div>
       <div className="container page-hero-inner">
-        <p className="section-label">{eyebrow}</p>
-        <h1 className="page-hero-title">{title}</h1>
-        <p className="page-hero-lede">{lede}</p>
-        {actions ? <div className="page-hero-actions">{actions}</div> : null}
+        <div className="page-hero-copy">
+          <p className="section-label">{eyebrow}</p>
+          <h1 className="page-hero-title">{title}</h1>
+          <p className="page-hero-lede">{lede}</p>
+          {actions ? <div className="page-hero-actions">{actions}</div> : null}
+        </div>
       </div>
     </section>
   );

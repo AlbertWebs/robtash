@@ -50,8 +50,9 @@ export function Footer() {
             />
           </Link>
           <p>
-            An independent African CSO advancing reparatory justice,
-            transitional justice, human rights, and democratic governance.
+            An ethics-driven Pan-African institution advancing African
+            discourses on reparatory justice, transitional justice, human
+            rights, democracy, and good governance.
           </p>
           <div className="footer-col footer-follow">
             <h2 className="footer-heading">Follow us</h2>

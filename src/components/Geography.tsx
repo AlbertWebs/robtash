@@ -1,4 +1,4 @@
-import { partnerPlaces, registeredIn } from "../data/content";
+import { partnerPlaces, registeredIn, whereWeWorkIntro } from "../data/content";
 import { FloatingGeometry } from "./FloatingGeometry";
 import { Reveal } from "./Reveal";
 import "./Geography.css";
@@ -13,11 +13,7 @@ export function Geography() {
           <h2 id="geo-heading" className="section-title">
             Transcontinental by design
           </h2>
-          <p className="section-lede">
-            Registered in Ghana, Sierra Leone, and the United States - with
-            partnerships and activities extending across Africa and the African
-            diaspora.
-          </p>
+          <p className="section-lede">{whereWeWorkIntro}</p>
         </Reveal>
 
         <Reveal className="geo-registered reveal-delay-1">

@@ -15,9 +15,10 @@ export function Impact() {
             Proof that African-led repair can move policy
           </h2>
           <p className="section-lede">
-            Since 2023, Reform Initiatives has contributed to major policy
-            processes, convenings, and solidarity campaigns across Africa and
-            the diaspora. A snapshot of the work:
+            Since its establishment in 2023, Reform Initiatives has contributed
+            to major policy processes, convenings, advocacy efforts and
+            collaborative initiatives across Africa and the diaspora. A snapshot
+            of the work:
           </p>
         </Reveal>
 
